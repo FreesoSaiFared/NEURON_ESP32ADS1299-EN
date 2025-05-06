@@ -1,105 +1,69 @@
 # NEURON_ESP32ADS1299
 
-Este proyecto, desarrollado por el grupo de investigación GPS UDI, consiste en un prototipo denominado NEURON que utiliza un ESP32 y el ADS1299 para la captura de señales EEG. En este proyecto se implementan filtros adaptativos en el proceso de construcción.
+This project, developed by the GPS UDI research group, is a prototype called NEURON that uses an ESP32 microcontroller and the ADS1299 chip to capture EEG signals. The project includes adaptive filters implemented during the system's development.
 
-## Contenido
+## Contents
 
-- [Descripción](#descripción)
-- [Características](#características)
-- [Especificaciones Técnicas](#especificaciones-técnicas)
-- [Requisitos](#requisitos)
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
-- [Agradecimientos](#agradecimientos)
+- [Description](#description)
+- [Features](#features)
+- [Technical Specifications](#technical-specifications)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributions](#contributions)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-## Descripción
+## Description
 
-El objetivo de este proyecto es desarrollar un sistema portátil y de bajo costo para la adquisición de señales EEG, utilizando el microcontrolador ESP32 y el convertidor analógico-digital ADS1299 de Texas Instruments. Este sistema permite la captura y procesamiento de señales cerebrales en tiempo real, facilitando su análisis para diversas aplicaciones en neurociencia e interfaces cerebro-computadora.
+The goal of this project is to develop a portable, low-cost system for acquiring EEG signals, using the ESP32 microcontroller and Texas Instruments' ADS1299 analog-to-digital converter. This system enables real-time brain signal capture and processing, facilitating analysis for a range of applications in neuroscience and brain-computer interfaces.
 
-## Características
+## Features
 
-- **Adquisición de señales EEG**: Captura de múltiples canales de señales electroencefalográficas con alta precisión.
-- **Procesamiento en tiempo real**: Implementación de filtros adaptativos para el procesamiento de señales.
-- **Conectividad inalámbrica**: Transmisión de datos mediante Wi-Fi utilizando el ESP32.
-- **Portabilidad**: Diseño compacto y eficiente en consumo energético.
+- **EEG Signal Acquisition**: Captures multiple high-precision EEG signal channels.
+- **Real-Time Processing**: Utilizes adaptive filters for signal processing.
+- **Wireless Connectivity**: Transmits data via Wi-Fi using the ESP32.
+- **Portability**: Compact design with efficient power consumption.
 
-## Especificaciones Técnicas
+## Technical Specifications
 
-- **Microcontrolador**: ESP32
-- **Convertidor ADC**: ADS1299 de 24 bits
-- **Canales EEG**: Hasta 8 canales
-- **Frecuencia de muestreo**: Configurable hasta 16 kHz
-- **Comunicación**: SPI entre ESP32 y ADS1299; Wi-Fi para transmisión de datos
+- **Microcontroller**: ESP32
+- **ADC Converter**: 24-bit ADS1299
+- **EEG Channels**: Up to 8 channels
+- **Sampling Frequency**: Configurable up to 16 kHz
+- **Communication**: SPI between ESP32 and ADS1299; Wi-Fi for data transmission
 
-## Requisitos
+## Requirements
 
 ### Hardware:
 
-- Placa de desarrollo ESP32
-- Módulo ADS1299
-- Electrodos para captura de señales EEG
-- Fuente de alimentación adecuada
+- ESP32 development board
+- ADS1299 module
+- EEG signal capture electrodes
+- Suitable power supply
 
 ### Software:
 
-- [PlatformIO](https://platformio.org/) o [Arduino IDE](https://www.arduino.cc/en/software)
-- Librerías necesarias (detalladas en el archivo `platformio.ini` o en las instrucciones de instalación)
+- [PlatformIO](https://platformio.org/) or [Arduino IDE](https://www.arduino.cc/en/software)
+- Necessary libraries (listed in the `platformio.ini` file or installation instructions)
 
-## Instalación
+## Installation
 
-1. **Clonar el repositorio**:
+1. **Clone the repository**:
 
    ```bash
    git clone https://github.com/jcristancho2/NEURON_ESP32ADS1299.git
    ```
+2. Make your changes and commit them with descriptive messages.
 
-2. **Configurar el entorno de desarrollo**:
+3. Submit a pull request detailing the changes you’ve made.
 
-   - Si utilizas PlatformIO:
-     - Abre el proyecto en PlatformIO.
-     - Las dependencias se instalarán automáticamente según el archivo `platformio.ini`.
+Submit a pull request detailing your modifications.
 
-   - Si utilizas Arduino IDE:
-     - Asegúrate de tener instalado el soporte para ESP32. Puedes seguir [esta guía](https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md).
-     - Instala las librerías necesarias manualmente (consulta el código para identificar las dependencias).
+### License
 
-3. **Cargar el código en el ESP32**:
+This project is licensed under the MIT License. See the LICENSE file for more information.
 
-   - Conecta el ESP32 a tu computadora mediante un cable USB.
-   - Selecciona el puerto y la placa adecuados en tu entorno de desarrollo.
-   - Compila y carga el código en el ESP32.
+### Acknowledgements
 
-## Uso
-
-1. **Configuración del hardware**:
-
-   - Conecta los electrodos en las posiciones adecuadas para la captura de señales EEG.
-   - Asegúrate de que el ADS1299 esté correctamente conectado al ESP32 mediante la interfaz SPI.
-
-2. **Ejecución**:
-
-   - Una vez cargado el código y con el hardware configurado, enciende el dispositivo.
-   - El ESP32 iniciará la captura de señales EEG y las procesará en tiempo real utilizando los filtros adaptativos implementados.
-   - Los datos pueden ser transmitidos inalámbricamente para su visualización o almacenamiento.
-
-## Contribuciones
-
-Las contribuciones son bienvenidas. Si deseas colaborar en este proyecto, por favor sigue estos pasos:
-
-1. **Fork** el repositorio.
-2. Crea una nueva rama con una descripción clara de tu función:
-   ```bash
-   git checkout -b feature/nueva-funcionalidad
-   ```
-3. Realiza tus cambios y haz commits con mensajes descriptivos.
-4. Envía un **pull request** detallando las modificaciones realizadas.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más información.
-
-## Agradecimientos
-
-Agradecemos al grupo de investigación GPS UDI , UDITECH, ZION por su apoyo en el desarrollo de este proyecto.
+We thank the GPS UDI research group, UDITECH, and ZION for their support in developing this project.
